@@ -1,0 +1,26 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Home</title>
+</head>
+<body>
+
+
+<form th:action="@{/logout}" method="post">
+    <input type="submit" value="Sign Out"/>
+</form>
+
+<h1>Welcome <span th:text="${loggedUserName}">Lidia</span></h1>
+
+<h2>List of all users</h2>
+</form>
+<form th:if="${isMermaidFound} == true" th:action="@{/stepTwoTheTears}" th:object="${isTheTearsHaveTaken}"
+      method="get">
+    <h2>Now you have the mermaid But still you need her tears</h2>
+    <button class="button button3">The tears of mermaid</button>
+</form>
+
+
+
+</body>
+</html>
