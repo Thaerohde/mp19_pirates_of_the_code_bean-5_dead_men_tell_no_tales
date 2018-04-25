@@ -38,7 +38,7 @@ public class EndpointController {
     @RequestMapping("/diary")
     @GetMapping("/removeCurse")
     String cursed() {
-        isSentRequest = true;
+        isCurseRemoved = true;
         return "redirect:/diary";
     }
     /*Captain Jack Sparrow needs to find the Trident of Poseidon
