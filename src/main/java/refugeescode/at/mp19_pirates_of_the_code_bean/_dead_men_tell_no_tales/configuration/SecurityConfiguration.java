@@ -39,8 +39,8 @@ public class SecurityConfiguration extends WebSecurityConfigurerAdapter {
     @Bean
     public UserDetailsService userDetailsService(PasswordEncoder encoder) {
         List<UserDetails> users = Stream.of(
-                User.withUsername("Jack Sparrow").password(encoder.encode("Jack Sparrow")).roles("jacksparrow").build(),
-                User.withUsername("Carina").password(encoder.encode("Carina")).roles("jacksparrow", "carina").build()
+                User.withUsername("jacksparrow").password(encoder.encode("jacksparrow")).roles("jacksparrow").build(),
+                User.withUsername("carina").password(encoder.encode("carina")).roles("jacksparrow", "carina").build()
 
         ).collect(Collectors.toList());
         return new InMemoryUserDetailsManager(users);
